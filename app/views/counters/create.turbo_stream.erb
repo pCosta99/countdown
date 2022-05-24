@@ -1,1 +1,2 @@
 <%= turbo_stream.append "counters", @counter %>
+<%= turbo_stream.remove dom_id(Counter.new) %>
