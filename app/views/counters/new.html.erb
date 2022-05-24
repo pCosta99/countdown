@@ -1,0 +1,11 @@
+<h1>New counter</h1>
+
+<%= turbo_frame_tag @counter do %>
+  <%= render "form", counter: @counter %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to counters", counters_path %>
+</div>

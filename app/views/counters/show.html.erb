@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<%= turbo_frame_tag @counter do %>
+  <%= render @counter %>
+<% end %>
+
+<div data-controller="countdown">
+  <b>Hours</b>: <span data-countdown-target="hours"><%= @hours.floor %></span><br>
+  <b>Minutes</b>: <span data-countdown-target="minutes"><%= @minutes.floor %></span><br>
+  <b>Seconds</b>: <span data-countdown-target="seconds"><%= @seconds.floor %></span>
+</div>
+
+<div>
+  <%= link_to "Edit this counter", edit_counter_path(@counter) %> |
+  <%= link_to "Back to counters", counters_path %>
+
+  <%= button_to "Destroy this counter", @counter, method: :delete %>
+</div>

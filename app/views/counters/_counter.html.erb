@@ -1,0 +1,24 @@
+<div id="<%= dom_id counter %>">
+  <p>
+    <strong>Name:</strong>
+    <%= counter.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= counter.description %>
+  </p>
+
+  <p>
+    <strong>Deadline:</strong>
+    <%= counter.deadline %>
+  </p>
+
+  <% unless action_name == "show" %>
+    <p>
+      <%= link_to "Show this counter", counter, data: { turbo_frame: "_top" } %> |
+      <%= link_to "Edit this counter", edit_counter_path(counter) %> |
+      <%= button_to "Delete this counter", counter, method: :delete %>
+    </p>
+  <% end %>
+</div>
